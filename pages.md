@@ -3,5 +3,5 @@ layout: page
 title: Pages
 ---
 
-* [The Elegance of Divergence]()
-* [EM Waves]()
+* [The Elegance of Divergence](/pages/divergence/)
+* [EM Waves](/pages/emwaves/)
