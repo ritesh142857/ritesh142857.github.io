@@ -8,13 +8,13 @@ permalink:        pretty
 
 # Setup
 title:            
-tagline:          'Existence'
-description:      'Ritesh'
+tagline:          ''
+description:      ''
 url:              https://riteshx95.github.io
 baseurl:          /
 
 author:
-  name:           'Ritesh'
+  name:           ''
   url:            
 
 paginate:         5
