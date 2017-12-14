@@ -12,6 +12,7 @@ tagline:          ''
 description:      'Ritesh'
 url:              https://riteshx95.github.io
 baseurl:          /
+root:             /
 
 author:
   name:           ''
