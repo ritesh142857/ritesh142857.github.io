@@ -17,7 +17,7 @@ The Gauss's law states that,
 
 where 'ρ' is the charge density in the region. Coulomb's law states that,
 <br>
-$$\overline{E} = q/4\pi\epsilon_{0}r^2$$
+<center>$$\overline{E} = q/4\pi\epsilon_{0}r^2$$</center>
 
 Observing the first two divergence equations, the similarity between them is quite clear. According to the Gauss's law equation, the source which is the charge density on the right hand side produces the electric field on the left hand side of the equation. So in order to produce a field of form given in the third equation, the charge density would have to be proportional to the delta function. This kind of charge density is simply a point charge. So any point charge produces an electric field which is inverse-square in nature. This is nothing but the Coulomb's law, which was formulated based purely on observations! The Coulomb's law is therefore contained in the Gauss's law. Another very interesting point about divergence is the following. The divergence always refers to the divergence of the vector field at a particular point. So going by Gauss's law, if the divergence of the electric field at a point is 0, then there is no charge at that point. Therefore, the divergence can be thought of as some sort of scanning operation to check if charge is present at a point or not*.
 
@@ -26,3 +26,7 @@ Observing the first two divergence equations, the similarity between them is qui
 Take the example of a parallel plate capacitor. The electric field between the plates of the capacitor is uniform going from the positive plate to the negative plate. If the divergence of this field is calculated between the plates, then the result will be 0 as expected i.e. there is no charge in the region between the plates. Now, suppose that a point charge is placed between the plates which is somehow tightly held in its position so that it is immovable. If we now calculate the divergence of the electric field between the plates, the result will not be 0. This is because the point charge produces an inverse-square divergent field which vectorially adds to the uniform field due to the plates resulting in an electric field with non-zero divergence.
 
 This clearly shows how elegantly mathematical the world around us is.
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
