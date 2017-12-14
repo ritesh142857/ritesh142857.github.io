@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-## Study Interests
+## Study Interests <b style="color: #12349A; font-size: 16px;">[Big fan of Geometry !!]</b>
 
 * EM Waves, Classical & Quantum Electrodynamics
 * The Special & General Theories of Relativity

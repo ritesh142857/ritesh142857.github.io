@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: 
 title: GNU Radio
 ---
 

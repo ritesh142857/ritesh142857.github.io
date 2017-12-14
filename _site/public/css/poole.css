@@ -87,6 +87,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
+  font-family: "Arvo", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 h1 {
   font-size: 1.8rem;
@@ -390,7 +392,8 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  font-family: "Source Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
