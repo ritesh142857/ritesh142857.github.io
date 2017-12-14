@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title></title>
+ <title>Ritesh Ghanta</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-14T17:56:52+05:30</updated>
+ <updated>2017-12-14T18:10:06+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
