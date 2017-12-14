@@ -7,7 +7,7 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:            
+title:            ''
 tagline:          ''
 description:      'Ritesh'
 url:              https://riteshx95.github.io
@@ -15,7 +15,7 @@ baseurl:          /
 
 author:
   name:           ''
-  url:            
+  url:
 
 paginate:         5
 
