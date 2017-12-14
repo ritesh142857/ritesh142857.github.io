@@ -17,7 +17,7 @@ The Gauss's law states that,
 
 where 'ρ' is the charge density in the region. Coulomb's law states that,
 <br>
-<center>$$\overline{E} = q/4\pi\epsilon_{0}r^2$$</center>
+      $$\overline{E} = q/4\pi\epsilon_{0}r^2$$
 
 Observing the first two divergence equations, the similarity between them is quite clear. According to the Gauss's law equation, the source which is the charge density on the right hand side produces the electric field on the left hand side of the equation. So in order to produce a field of form given in the third equation, the charge density would have to be proportional to the delta function. This kind of charge density is simply a point charge. So any point charge produces an electric field which is inverse-square in nature. This is nothing but the Coulomb's law, which was formulated based purely on observations! The Coulomb's law is therefore contained in the Gauss's law. Another very interesting point about divergence is the following. The divergence always refers to the divergence of the vector field at a particular point. So going by Gauss's law, if the divergence of the electric field at a point is 0, then there is no charge at that point. Therefore, the divergence can be thought of as some sort of scanning operation to check if charge is present at a point or not*.
 
