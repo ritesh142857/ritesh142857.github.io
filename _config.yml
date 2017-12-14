@@ -10,8 +10,8 @@ permalink:        pretty
 title:            Hyde
 tagline:          'A Jekyll theme'
 description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          http://riteshx95.github.io/
+url:              http://riteshx95.github.io/
+baseurl:          http://riteshx95.github.io/riteshx95.github.io/
 
 author:
   name:           'Ritesh'
@@ -23,7 +23,7 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/riteshx95/riteshx95.github.io
+  repo:           https://github.com/riteshx95/riteshx95.github.io/
 
 plugins:
   - jekyll-paginate
