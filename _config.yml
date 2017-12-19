@@ -7,14 +7,14 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:            ''
+title:            'Ritesh Ghanta'
 tagline:          ''
 description:      'Ritesh'
 url:              https://riteshx95.github.io
 baseurl:          https://riteshx95.github.io/
 #baseurl:          /
 
-author:
+author:           'Ritesh Ghanta'
   name:           ''
   url:
 
