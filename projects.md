@@ -22,6 +22,8 @@ title: Projects
 
 ## Tutorials and Setups
 
+* [AVR Template Programs](https://github.com/riteshx95/avrprograms)
+
 * [RTL-SDR](/tutsets/rtlsdr/)
 * [NFS Shared Folder](/tutsets/nfssetup/)
 * [NodeMCU](/tutsets/nodemcu/)
