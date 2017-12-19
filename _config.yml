@@ -14,10 +14,9 @@ url:              https://riteshx95.github.io
 baseurl:          https://riteshx95.github.io/
 #baseurl:          /
 
-author:           ''
+author:
   name:           ''
-  url:            ''
-
+  url:
 
 paginate:         5
 
@@ -29,5 +28,4 @@ github:
 
 plugins:
   - jekyll-paginate
-  - jekyll-gist
-  - jekyll-seo-tag
+- jekyll-gist
