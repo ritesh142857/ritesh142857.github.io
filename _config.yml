@@ -7,16 +7,19 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:            ''
+title:            'Ritesh Ghantai'
 tagline:          ''
 description:      'Ritesh'
 url:              https://riteshx95.github.io
 baseurl:          https://riteshx95.github.io/
 #baseurl:          /
 
-author:
+author:           'Ritesh Ghanta'
   name:           ''
-  url:
+  url:            'https://riteshx95.github.io'
+
+  social:
+    name: "Ritesh Ghanta"
 
 paginate:         5
 
@@ -29,3 +32,4 @@ github:
 plugins:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-seo-tag
