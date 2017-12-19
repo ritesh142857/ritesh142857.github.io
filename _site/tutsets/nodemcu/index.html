@@ -99,7 +99,7 @@
       
         
           
-            <a class="sidebar-nav-item active" href="/papers/">Publications</a>
+            <a class="sidebar-nav-item" href="/papers/">Publications</a>
           
         
       
@@ -121,13 +121,34 @@
 
 
     <div class="content container">
-      <div class="page">
-  <h1 class="page-title">Publications</h1>
-  <ul>
-<li>V. Sridhar, Venkat Ritesh Ghanta, T. Venu Gopal, &quot;Spectrum Sensing in Cognitive Radio Using Energy-Bandwidth Characteristic&quot;, Journal of Advanced Research in Dynamical and Control Systems, Vol. 9, Iss. 2, pp. 263-271, Nov. 2017 <a href="http://www.jardcs.org/abstract.php?archiveid=1970">[<span style="font-size: 14px;">Link</span>]</a></li>
+      <h2>NodeMCU Firmware Setup</h2>
+
+<p><hr></p>
+
+<ul>
+<li>Download the NodeMCU firmware from:</li>
 </ul>
 
-</div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>https://github.com/nodemcu/nodemcu-firmware/releases</code></pre></figure>
+
+<ul>
+<li>Download esptool for flashing:
+<br>Enter the folowing command:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>git clone https://github.com/themadinventor/esptool.git</code></pre></figure>
+
+<ul>
+<li>Connect the NodeMCU to the computer and put it in Flash Mode.
+Now upload the firmware by entering the following:
+<br><br>(Assuming that /dev/ttyUSB0 is the serial port to which the NodeMCU is connected. If different, replace this with that one.)</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo python esptool.py –port /dev/ttyUSB0 write_flash 0x00000 path_to_firmware.bin</code></pre></figure>
+
+<ul>
+<li>After the firmware is flashed, disconnect and reconnect the   NodeMCU to the computer, launch Screen or Minicom and press     reset on the NodeMCU.</li>
+</ul>
 
     </div>
 

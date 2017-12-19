@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    Ritesh Ghanta &middot; 
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          
+        </a>
+      </h1>
+      <p class="lead">Ritesh</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Hello !</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/contact/">Contact</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/pages/">Pages</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/papers/">Publications</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+        
+          
+        
+      
+
+    </nav>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+      <h2>NFS Shared Folder Setup</h2>
+
+<p><hr></p>
+
+<p>First off, make sure the devices which will share folders are on the same network.</p>
+
+<p>NFS file sharing is used here for sharing folders between the Raspberry Pi and the PC. The nfs must be setup on both the devices for sharing.</p>
+
+<p>Make sure that the following packages are installed on the devices:</p>
+
+<p>PC1 (host): nfs-kernel-server
+   <br>PC2: nfs-common</p>
+
+<p>Setting up the folders to be shared:</p>
+
+<ol>
+<li><p>The folder being shared must be the NetBeans project folder
+(Ex: CppApplications_1)</p></li>
+<li><p>On the host side:
+Check whether nfs-kernel-server is installed or not by typing the following command:</p></li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>dpkg -s nfs-kernel-server</code></pre></figure>
+
+<p>If its not present, install it by typing:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo apt-get install nfs-kernel-server</code></pre></figure>
+
+<p>Now the folder to share must be prepared. Assume the folder is present at the following location:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>/home/userr/NetBeansProjects/CppApplication_1</code></pre></figure>
+
+<p>Edit the following file: /etc/exports</p>
+
+<p>Add the following line:</p>
+
+<p>(FolderToBeShared) (Client IP)(rw,sync,no<em>root</em>squash,no<em>subtree</em>check)</p>
+
+<p>for example, if the Client (Rpi) IP is 192.168.2.3,</p>
+
+<p>/home/userr/NetBeansProjects/CppApplication<em>1 192.168.2.3(rw,sync,no</em>root<em>squash,no</em>subtree_check)</p>
+
+<p>Save and exit.</p>
+
+<p>Run the following command for adding our new export to the export table:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo exportfs -a</code></pre></figure>
+
+<p>Then issue the following command for starting the nfs server:</p>
+
+<p>sudo service nfs-kernel-server start</p>
+
+<p>The shared folder is now visible to the Raspberry Pi.</p>
+
+<p>On the Client Side:</p>
+
+<p>Make sure that the package nfs-common is installed.</p>
+
+<p>Now create a directory for mounting the shared folder. The directory that is used here is /mnt/nfs/home/userr/NetBeansProjects/CppApplication_1</p>
+
+<p>To create the directory,</p>
+
+<p>sudo mkdir /mnt/nfs/home/userr/NetBeansProjects/CppApplication_1</p>
+
+<p>To mount,</p>
+
+<p>sudo mount (HostIP):/home/userr/NetBeansProjects/CppApplication<em>1 /mnt/nfs/home/userr/NetBeansProjects/CppApplication</em>1</p>
+
+<p>The folder is now shared between the PC and the Rpi.</p>
+
+    </div>
+
+  </body>
+</html>
