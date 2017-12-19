@@ -14,8 +14,8 @@ url:              https://riteshx95.github.io
 baseurl:          https://riteshx95.github.io/
 #baseurl:          /
 
-author:           
-  name:           ''
+author:          riteshx95
+  name:           'Ritesh Ghanta'
   url:
 
 paginate:         5
