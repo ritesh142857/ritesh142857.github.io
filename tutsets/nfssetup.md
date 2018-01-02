@@ -42,11 +42,11 @@ Edit the following file: /etc/exports
 
 Add the following line:
 
-<b>(FolderToBeShared) (Client IP)(rw,sync,no_root_squash,no_subtree_check)</b>
+<b style="font-size: 14px;">(FolderToBeShared) (Client IP)(rw,sync,no_root_squash,no_subtree_check)</b>
 
 for example, if the Client (Rpi) IP is 192.168.2.3,
 
-<b>/home/userr/exampleFolder 192.168.2.3(rw,sync,no_root_squash,no_subtree_check)</b>
+<b style="font-size: 14px;">/home/userr/exampleFolder 192.168.2.3(rw,sync,no_root_squash,no_subtree_check)</b>
 
 Save and exit.
 
