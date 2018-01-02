@@ -8,19 +8,18 @@ title: NFS Shared Folder Setup
 
 First off, make sure the devices which will share folders are on the same network.
 
-NFS file sharing is used here for sharing folders between the Raspberry Pi and the PC. The nfs must be setup on both the devices for sharing.
+NFS file sharing is used here for sharing folders between Server:PC1 and Client:PC2. The nfs must be setup on both the devices for sharing.
 
 Make sure that the following packages are installed on the devices:
 
-   PC1 (host): nfs-kernel-server
-   <br>PC2: nfs-common
+   On Server:PC1 -> nfs-kernel-server
+   On Client:PC2 -> nfs-common
 
 Setting up the folders to be shared:
 
-1. The folder being shared must be the NetBeans project folder
-(Ex: CppApplications_1)
+1. Let the folder to be shared be called <b>exampleFolder</b>
 
-2. On the host side:
+2. On the server/host side:
 Check whether nfs-kernel-server is installed or not by typing the following command:
 
 {% highlight bash %}
@@ -32,9 +31,9 @@ If its not present, install it by typing:
 sudo apt-get install nfs-kernel-server
 {% endhighlight %}
 
-Now the folder to share must be prepared. Assume the folder is present at the following location:
+Now the folder to share must be prepared. Assume the folder is present at the following location on Server:PC1
 {% highlight bash %}
-/home/userr/NetBeansProjects/CppApplication_1
+/home/userr/exampleFolder
 {% endhighlight %}
 
 Edit the following file: /etc/exports
@@ -45,7 +44,7 @@ Add the following line:
 
 for example, if the Client (Rpi) IP is 192.168.2.3,
 
-/home/userr/NetBeansProjects/CppApplication_1 192.168.2.3(rw,sync,no_root_squash,no_subtree_check)
+/home/userr/exampleFolder 192.168.2.3(rw,sync,no_root_squash,no_subtree_check)
 
 Save and exit.
 
@@ -60,20 +59,20 @@ Then issue the following command for starting the nfs server:
 
 sudo service nfs-kernel-server start
 
-The shared folder is now visible to the Raspberry Pi.
+The shared folder is now visible to the Client:PC2.
 
 On the Client Side:
 
 Make sure that the package nfs-common is installed.
 
-Now create a directory for mounting the shared folder. The directory that is used here is /mnt/nfs/home/userr/NetBeansProjects/CppApplication_1
+Now create a directory for mounting the shared folder. The directory that is used here is /mnt/nfs/home/userr/exampleFolder
 
 To create the directory,
 
-sudo mkdir /mnt/nfs/home/userr/NetBeansProjects/CppApplication_1
+sudo mkdir /mnt/nfs/home/userr/exampleFolder
 
 To mount,
 
-sudo mount (HostIP):/home/userr/NetBeansProjects/CppApplication_1 /mnt/nfs/home/userr/NetBeansProjects/CppApplication_1
+sudo mount (HostIP):/home/userr/exampleFolder /mnt/nfs/home/userr/exampleFolder
 
-The folder is now shared between the PC and the Rpi.
+The folder is now shared between Server:PC1 and the Client:PC2
