@@ -44,7 +44,7 @@ Add the following line:
 
 <b style="font-size: 14px;">(FolderToBeShared) (Client IP)(rw,sync,no_root_squash,no_subtree_check)</b>
 
-for example, if the Client (Rpi) IP is 192.168.2.3,
+for example, if the Client:PC2 IP is 192.168.2.3,
 
 <b style="font-size: 14px;">/home/userr/exampleFolder 192.168.2.3(rw,sync,no_root_squash,no_subtree_check)</b>
 
