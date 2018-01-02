@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    Ritesh Ghanta &middot; 
+    Ritesh Ghanta &middot; Ritesh Ghanta
   </title>
 
   <!-- CSS -->
@@ -26,6 +26,22 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
+
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>NFS Shared Folder Setup | Ritesh Ghanta</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="NFS Shared Folder Setup" />
+<meta name="author" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ritesh Ghanta" />
+<meta property="og:description" content="Ritesh Ghanta" />
+<link rel="canonical" href="http://localhost:4000/tutsets/nfssetup/" />
+<meta property="og:url" content="http://localhost:4000/tutsets/nfssetup/" />
+<meta property="og:site_name" content="Ritesh Ghanta" />
+<script type="application/ld+json">
+{"description":"Ritesh Ghanta","author":{"@type":"Person","name":""},"@type":"WebPage","url":"http://localhost:4000/tutsets/nfssetup/","headline":"NFS Shared Folder Setup","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
 </head>
 
 
@@ -39,7 +55,7 @@
           
         </a>
       </h1>
-      <p class="lead">Ritesh</p>
+      <p class="lead">Ritesh Ghanta</p>
     </div>
 
     <nav class="sidebar-nav">
@@ -127,21 +143,24 @@
 
 <p>First off, make sure the devices which will share folders are on the same network.</p>
 
-<p>NFS file sharing is used here for sharing folders between the Raspberry Pi and the PC. The nfs must be setup on both the devices for sharing.</p>
+<p>NFS file sharing is used here for sharing folders between <b>Server:PC1</b> and <b>Client:PC2</b>.
+<br>
+nfs must be setup on both the devices for sharing.</p>
 
 <p>Make sure that the following packages are installed on the devices:</p>
 
-<p>PC1 (host): nfs-kernel-server
-   <br>PC2: nfs-common</p>
+<ul>
+<li>On Server:PC1 -&gt; nfs-kernel-server</li>
+<li>On Client:PC2 -&gt; nfs-common</li>
+</ul>
 
-<p>Setting up the folders to be shared:</p>
+<p>First set up the folder to be shared.</p>
 
-<ol>
-<li><p>The folder being shared must be the NetBeans project folder
-(Ex: CppApplications_1)</p></li>
-<li><p>On the host side:
-Check whether nfs-kernel-server is installed or not by typing the following command:</p></li>
-</ol>
+<p>Let the folder to be shared be called <b>exampleFolder</b> (on Server:PC1)</p>
+
+<h2>On the server/host side:</h2>
+
+<p>Check whether nfs-kernel-server is installed or not by typing the following command:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>dpkg -s nfs-kernel-server</code></pre></figure>
 
@@ -149,19 +168,19 @@ Check whether nfs-kernel-server is installed or not by typing the following comm
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo apt-get install nfs-kernel-server</code></pre></figure>
 
-<p>Now the folder to share must be prepared. Assume the folder is present at the following location:</p>
+<p>Now the folder to share must be prepared. Assume the folder is present at the following location on Server:PC1</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>/home/userr/NetBeansProjects/CppApplication_1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>/home/userr/exampleFolder</code></pre></figure>
 
 <p>Edit the following file: /etc/exports</p>
 
 <p>Add the following line:</p>
 
-<p>(FolderToBeShared) (Client IP)(rw,sync,no<em>root</em>squash,no<em>subtree</em>check)</p>
+<p><b>(FolderToBeShared) (Client IP)(rw,sync,no<em>root</em>squash,no<em>subtree</em>check)</b></p>
 
 <p>for example, if the Client (Rpi) IP is 192.168.2.3,</p>
 
-<p>/home/userr/NetBeansProjects/CppApplication<em>1 192.168.2.3(rw,sync,no</em>root<em>squash,no</em>subtree_check)</p>
+<p><b>/home/userr/exampleFolder 192.168.2.3(rw,sync,no<em>root</em>squash,no<em>subtree</em>check)</b></p>
 
 <p>Save and exit.</p>
 
@@ -171,25 +190,25 @@ Check whether nfs-kernel-server is installed or not by typing the following comm
 
 <p>Then issue the following command for starting the nfs server:</p>
 
-<p>sudo service nfs-kernel-server start</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo service nfs-kernel-server start</code></pre></figure>
 
-<p>The shared folder is now visible to the Raspberry Pi.</p>
+<p>The shared folder is now visible to the Client:PC2.</p>
 
-<p>On the Client Side:</p>
+<h2>On the Client Side:</h2>
 
 <p>Make sure that the package nfs-common is installed.</p>
 
-<p>Now create a directory for mounting the shared folder. The directory that is used here is /mnt/nfs/home/userr/NetBeansProjects/CppApplication_1</p>
+<p>Now create a directory for mounting the shared folder. The directory that is used here is <b>/mnt/nfs/home/userr/exampleFolder</b></p>
 
 <p>To create the directory,</p>
 
-<p>sudo mkdir /mnt/nfs/home/userr/NetBeansProjects/CppApplication_1</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo mkdir /mnt/nfs/home/userr/exampleFolder</code></pre></figure>
 
 <p>To mount,</p>
 
-<p>sudo mount (HostIP):/home/userr/NetBeansProjects/CppApplication<em>1 /mnt/nfs/home/userr/NetBeansProjects/CppApplication</em>1</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo mount <span class="o">(</span>HostIP<span class="o">)</span>:/home/userr/exampleFolder /mnt/nfs/home/userr/exampleFolder</code></pre></figure>
 
-<p>The folder is now shared between the PC and the Rpi.</p>
+<p>The folder is now shared between Server:PC1 and the Client:PC2</p>
 
     </div>
 

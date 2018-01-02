@@ -8,18 +8,20 @@ title: NFS Shared Folder Setup
 
 First off, make sure the devices which will share folders are on the same network.
 
-NFS file sharing is used here for sharing folders between Server:PC1 and Client:PC2. The nfs must be setup on both the devices for sharing.
+NFS file sharing is used here for sharing folders between <b>Server:PC1</b> and <b>Client:PC2</b>.
+<br>
+nfs must be setup on both the devices for sharing.
 
 Make sure that the following packages are installed on the devices:
 
-   On Server:PC1 -> nfs-kernel-server
-   On Client:PC2 -> nfs-common
+ - On Server:PC1 -> nfs-kernel-server
+ - On Client:PC2 -> nfs-common
 
-Setting up the folders to be shared:
+First set up the folder to be shared.
 
-1. Let the folder to be shared be called <b>exampleFolder</b>
+Let the folder to be shared be called <b>exampleFolder</b> (on Server:PC1)
 
-2. On the server/host side:
+<h2>On the server/host side:</h2>
 Check whether nfs-kernel-server is installed or not by typing the following command:
 
 {% highlight bash %}
@@ -40,11 +42,11 @@ Edit the following file: /etc/exports
 
 Add the following line:
 
-(FolderToBeShared) (Client IP)(rw,sync,no_root_squash,no_subtree_check)
+<b>(FolderToBeShared) (Client IP)(rw,sync,no_root_squash,no_subtree_check)</b>
 
 for example, if the Client (Rpi) IP is 192.168.2.3,
 
-/home/userr/exampleFolder 192.168.2.3(rw,sync,no_root_squash,no_subtree_check)
+<b>/home/userr/exampleFolder 192.168.2.3(rw,sync,no_root_squash,no_subtree_check)</b>
 
 Save and exit.
 
@@ -54,25 +56,30 @@ Run the following command for adding our new export to the export table:
 sudo exportfs -a
 {% endhighlight %}
 
-
 Then issue the following command for starting the nfs server:
 
+{% highlight bash %}
 sudo service nfs-kernel-server start
+{% endhighlight %}
 
 The shared folder is now visible to the Client:PC2.
 
-On the Client Side:
+<h2>On the Client Side:</h2>
 
 Make sure that the package nfs-common is installed.
 
-Now create a directory for mounting the shared folder. The directory that is used here is /mnt/nfs/home/userr/exampleFolder
+Now create a directory for mounting the shared folder. The directory that is used here is <b>/mnt/nfs/home/userr/exampleFolder</b>
 
 To create the directory,
 
+{% highlight bash %}
 sudo mkdir /mnt/nfs/home/userr/exampleFolder
+{% endhighlight %}
 
 To mount,
 
+{% highlight bash %}
 sudo mount (HostIP):/home/userr/exampleFolder /mnt/nfs/home/userr/exampleFolder
+{% endhighlight %}
 
 The folder is now shared between Server:PC1 and the Client:PC2
