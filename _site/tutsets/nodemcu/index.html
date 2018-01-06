@@ -157,10 +157,13 @@
 <ul>
 <li>Connect the NodeMCU to the computer and put it in Flash Mode.
 Now upload the firmware by entering the following:
-<br><br>(Assuming that /dev/ttyUSB0 is the serial port to which the NodeMCU is connected. If different, replace this with that one.)</li>
+<br><br>(Assuming that /dev/ttyUSB0 is the serial port to which the NodeMCU is connected. If different, replace this with that one.)
+<span style="font-size: 12px;"></li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo python esptool.py –port /dev/ttyUSB0 write_flash 0x00000 path_to_firmware.bin</code></pre></figure>
+
+<p></span></p>
 
 <ul>
 <li>After the firmware is flashed, disconnect and reconnect the   NodeMCU to the computer, launch Screen or Minicom and press     reset on the NodeMCU.</li>
