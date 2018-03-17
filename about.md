@@ -7,6 +7,7 @@ title: About
 
 * EM Waves, Classical & Quantum Electrodynamics
 * The Special & General Theories of Relativity
+* Computational Geometry
 * RF Front End Design & Spectrum Sensing in Cognitive Radio
 * Antenna Arrays & MIMO Systems
 
