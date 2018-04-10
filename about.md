@@ -13,4 +13,4 @@ title: About
 
 ## Programming Languages
 
-* C, C++ & Python
+* <b style="font-size: 20px">C++</b>, <b style="font-size: 18px">C</b>, <b style="font-size: 16px">Python</b>
