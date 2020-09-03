@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/riteshx95
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ritesh142857.github.io
+  * I am riteshx95 (https://keybase.io/riteshx95) on keybase.
+  * I have a public key ASDfrhv8N9xUtaCNp36GdPrSyySYHcq-UxqQQy8MSVcR_Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203f6e8802367f36809479d15748e5251ca93917c8277b9db52d80126b695a0c9e0a",
+      "host": "keybase.io",
+      "kid": "0120dfae1bfc37dc54b5a08da77e8674fad2cb24981dcabe531a90432f0c495711fd0a",
+      "uid": "e804bac2391993a3c0d0bcf291080619",
+      "username": "riteshx95"
+    },
+    "merkle_root": {
+      "ctime": 1587393915,
+      "hash": "54dab7039856df535fa3d270df634e4dadce75b2f3b3f020acf8a722299795bd256ec59829862e94329081836f8d00e85b89f83f4b1f084767a644f4aea47b02",
+      "hash_meta": "d100c810cd19676087e2f8b6a4327406626945620274ea784cb9e7160a45e799",
+      "seqno": 15988645
+    },
+    "service": {
+      "entropy": "1Hnt5zhBXPzfPAY7JP9ClQTk",
+      "hostname": "ritesh142857.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.4.0"
+  },
+  "ctime": 1587393954,
+  "expire_in": 504576000,
+  "prev": "874c56e3a445cabc12dc9837cea4689de5b9da34398fcd1a4dbf966b33bbf1f0",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg364b/DfcVLWgjad+hnT60sskmB3KvlMakEMvDElXEf0Kp3BheWxvYWTESpcCEcQgh0xW46RFyrwS3Jg3zqRoneW52jQ5j80aTb+WazO78fDEIMcWmejP2LbNyCvAA+kGTdF2E9dH0zmfx/BFg9DSOURNAgHCo3NpZ8RAns8g1sgz0U8zNT8eEppQe8aDf7FiGzMcGCcfnLs0Qnd0lmssMwMEO9dXARE5QkvxmiEML1GOxisKs2n0LyCmCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDputsRePkZPmbemHMHPC7/JdZQIT5vlyb0pVrsYlWgHo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/riteshx95
+
+==================================================================

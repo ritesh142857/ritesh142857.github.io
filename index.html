@@ -1,0 +1,188 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="y-fonts.css" rel="stylesheet">
+    <link href="y-des.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="y-nav">
+        <div><img src="test.png" ></div>
+        <a href="index.html" class="active"><span>Home</span></a>
+<a href="music.html"><span>      Music</span></a>
+<a href="pages.html"><span>Pages</span></a>
+<a href="random.html"><span>Random</span></a>
+
+      </div>
+
+      <!--Home-->
+<div style="float: left; width: 100%; padding: 0; margin: 0;">
+  <pre class="y-myhome" id="bigme" onclick="makeSmall()" >
+
+                   *.*
+                  *..*
+                 *....*
+                *......*
+               *.....*
+              *....*
+               *....*
+           /\  *..*
+          //\\  ..
+         ///\\\ ||
+        ////\\\\||
+       /////\\\\\|
+      //////\\\\\\
+     ///////\\\\\\\
+    /==============\      Hello !
+     |            |         _
+     |	 ##  ##   |       _/ \_
+     |	 ##  ##   |        (")
+     |   ##  ##   |        /#\__,
+     |            |       / #
+     |	  ____ 	  |      /  #
+     |	  |..| 	  |         |\
+     |    |..|    |         | \
+     |    |..|    |         /  \
+     |    |..|    |        /_  /_
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  </pre>
+  <pre class="y-myhome" id="smallme" onclick="sendNear()" >
+
+                   *.*
+                  *..*
+                 *....*
+                *......*
+               *.....*
+              *....*
+               *....*
+           /\  *..*
+          //\\  ..
+         ///\\\ ||
+        ////\\\\||
+       /////\\\\\|
+      //////\\\\\\
+     ///////\\\\\\\
+    /==============\
+     |            |
+     |	 ##  ##   |
+     |	 ##  ##   |
+     |   ##  ##   |     This is better.
+     |            |     I'd like to go home now.
+     |	  ____ 	  |
+     |	  |..| 	  |         _/\_
+     |    |..|    |          OO
+     |    |..|    |          /\
+     |    |..|    |          ||
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  </pre>
+  <pre class="y-myhome" id="smallme_almostthere" onclick="sendToDoor()" >
+
+                   *.*
+                  *..*
+                 *....*
+                *......*
+               *.....*
+              *....*
+               *....*
+           /\  *..*
+          //\\  ..
+         ///\\\ ||
+        ////\\\\||
+       /////\\\\\|
+      //////\\\\\\
+     ///////\\\\\\\
+    /==============\
+     |            |
+     |	 ##  ##   |
+     |	 ##  ##   |
+     |   ##  ##   |
+     |            |  Almost there.
+     |	  ____ 	  |
+     |	  |..| 	  |    _/\_
+     |    |..|    |     OO
+     |    |..|    |     /\
+     |    |..|    |     ||
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  </pre>
+  <pre class="y-myhome" id="smallme_atthedoor" onclick="sendInside()" >
+
+                   *.*
+                  *..*
+                 *....*
+                *......*
+               *.....*
+              *....*
+               *....*
+           /\  *..*
+          //\\  ..
+         ///\\\ ||
+        ////\\\\||
+       /////\\\\\|
+      //////\\\\\\
+     ///////\\\\\\\
+    /==============\
+     |            |
+     |	 ##  ##   |
+     |	 ##  ##   |
+     |   ##  ##   |
+     |            |
+     |	  ____ 	  |
+     |	  |._/\_  | Now send me in.
+     |    |..OO   |
+     |    |../\   |
+     |    |..||   |
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  </pre>
+  <pre class="y-myhome y-lastone" id="smallme_inside" >
+
+                   *.*
+                  *..*
+                 *....*
+                *......*
+               *.....*
+              *....*
+               *....*
+           /\  *..*
+          //\\  ..
+         ///\\\ ||
+        ////\\\\||
+       /////\\\\\|
+      //////\\\\\\
+     ///////\\\\\\\
+    /==============\
+     |            |
+     |	 ##  ##   |
+     |	 ##  ##   |
+     |   ##  ##   |
+     |            |
+     |	  _____	  |
+     |	  |...|   |
+     |    |...|   |
+     |    |...|   |
+     |    |...|   |
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  </pre>
+</div>
+
+<script>
+function makeSmall() {
+  document.getElementById("bigme").style.display = "none";
+  document.getElementById("smallme").style.display = "block";
+}
+function sendNear() {
+  document.getElementById("smallme").style.display = "none";
+  document.getElementById("smallme_almostthere").style.display = "block";
+}
+function sendToDoor() {
+  document.getElementById("smallme_almostthere").style.display = "none";
+  document.getElementById("smallme_atthedoor").style.display = "block";
+}
+function sendInside() {
+  document.getElementById("smallme_atthedoor").style.display = "none";
+  document.getElementById("smallme_inside").style.display = "block";
+}
+</script>
+
+    </div>
+  </body>
+</html>
