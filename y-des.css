@@ -281,16 +281,18 @@ p, a {
 
 .y-projectlist > ul {
   float: left;
+  width: 100%;
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-family: "Open Sans";
   font-size: 12px;
-  padding-left: 7px;
   padding-top: 14px;
 }
 .y-projectlist > ul > li {
   margin-bottom: 7px;
+  padding-left: 9px;
+  padding-right: 9px;
   padding-bottom: 9px;
   border-bottom: 1px solid #EEEEEE;
   box-shadow: rgba(245, 245, 245, 1) 0px 1px 2px 0px;
