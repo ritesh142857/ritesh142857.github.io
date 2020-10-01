@@ -302,3 +302,32 @@ p, a {
   font-size: 13px;
 }
 
+.y-subpage-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
+  margin-top: 11px;
+}
+.y-subpage-links > li {
+  width: 100%;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-bottom: 7px;
+}
+.y-subpage-links > li:before {
+  content: ' \2192';
+  margin-right: 7px;
+  color: #777777;
+}
+.y-subpage-links > li > a {
+  font-family: "Arvo";
+  font-size: 13px;
+  color: #2A5B84;
+}
+.y-subpage-links > li > a:visited {
+  color: #2E9797;
+}
+
+

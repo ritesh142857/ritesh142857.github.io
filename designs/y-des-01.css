@@ -1,0 +1,105 @@
+.y-nav > a {
+  background-color: #2A5B84;
+  color: #FBEED1;
+}
+.y-nav > a:hover {
+  box-shadow: none;
+  background-color: #51799A;
+}
+.active {
+  box-shadow: none;
+  background-color: #FBEED1 !important;
+  color: #2A5B84 !important;
+}
+
+.y-des-01 {
+  font-family: "Open Sans";
+  background-color: #FBEED1;
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+.y-des-01 > form {
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+}
+.y-des-01 > form > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.y-des-01 > form > ul > li {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.y-des-01 > form > ul > li > label {
+  font-family: "Arvo";
+  font-size: 13px;
+  float: left;
+  display: block;
+  text-align: right;
+  padding-right: 7px;
+  width: 57px;
+  line-height: 23px;
+  background-color: #2A5B84;
+  color: #FBEED1;
+  border-top: 1px solid #2A5B84;
+  border-bottom: 1px solid #2A5B84;
+}
+.y-des-01 > form > ul > li > input[type=text] {
+  float: left;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 7px;
+  line-height: 23px;
+  border-bottom: 2px solid #2A5B84;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "Open Sans";
+  font-size: 13px;
+}
+.y-des-01 > form > ul > li > input[type=submit] {
+   border: 2px solid #2A5B84;
+   border-radius: 0;
+   -webkit-appearance: none;
+   outline: none;
+   background-color: #F1E4C8; //#FBEED1;
+   color: #2A5B84;
+   font-family: "Arvo";
+   font-size: 13px;
+   padding: 4px 9px 4px 9px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+.y-des-01 > form > ul > li > input[type=submit]:hover {
+   box-shadow: 0px 4px 8px #333333;
+   background-color: #2A5B84;
+   color: #FBEED1;
+}
+
+/*
+.y-des-01 > form > ul > li > input[type=submit] {
+   border: none;
+   outline: none;
+   background-color: #2A5B84;
+   color: #FBEED1;
+   font-family: "Arvo";
+   font-size: 13px;
+   padding: 4px 9px 4px 9px;
+   border: 3px solid #8BA6BC;
+   transition: 0.3s;
+}
+.y-des-01 > form > ul > li > input[type=submit]:hover {
+   box-shadow: 0px 4px 8px #333333;
+   background-color: #1F4260;
+   border: 3px solid #1F4260;
+}
+*/
