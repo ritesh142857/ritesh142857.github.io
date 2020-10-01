@@ -312,8 +312,6 @@ p, a {
 }
 .y-subpage-links > li {
   width: 100%;
-  padding-left: 11px;
-  padding-right: 11px;
   margin-bottom: 7px;
 }
 .y-subpage-links > li:before {
