@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="y-fonts.css" rel="stylesheet">
+    <link href="y-des.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="y-nav">
+        <!--div><img src="test.png" ></div-->
+        <a href="index.html"><span>Home</span></a>
+<a href="projects.html"><span>Projects</span></a>
+<a href="design.html"><span>Design</span></a>
+<a href="music.html"><span>Music</span></a>
+<a href="transform.html" class="active"><span>Transform</span></a>
+
+      </div>
+
+      <!--Transform-->
+
+<script type="text/javascript" src="sjcl.js"></script>
+
+<script>
+function doo() {
+  var opener = document.getElementById("one").value;
+  var kees = [];
+  opener = opener.split('');
+  for (xx in opener) {
+    kees.push(parseInt(opener[xx]));
+  }
+  var doo = new sjcl.cipher.aes(kees);
+  var take_r = document.getElementById("two").value;
+
+  var take = [];
+
+  for(xx in take_r) {
+    take.push(take_r[xx].charCodeAt(0));
+  }
+
+  console.log(take);
+  if((take.length % 4) !== 0) {
+    var extra = Array(4 - (take_r.length % 4)).fill(0);
+    take = take.concat(extra);
+  }
+
+  var i, result = [];
+  for(i = 0; i < (take.length / 4); i++) {
+    var prep = take.slice((4 * i), (4 * (i + 1)));
+    var t = doo.encrypt(prep);
+    var tt = doo.decrypt(t);
+    result = result.concat(t);
+  }
+
+  document.getElementById("y-transform-take-it").style.display = "block";
+  document.getElementById("y-transform-take-it").value = "[" + result.toString() + "]";
+}
+
+function undoo() {
+  var opener = document.getElementById("one").value;
+  var kees = [];
+  opener = opener.split('');
+  for (xx in opener) {
+    kees.push(parseInt(opener[xx]));
+  }
+
+  var undoo = new sjcl.cipher.aes(kees);
+  var take = document.getElementById("two").value;
+  take = JSON.parse(take);
+
+  var i, result = [];
+  for(i = 0; i < (take.length / 4); i++) {
+    var prep = take.slice((4 * i), ((i + 1) * 4));
+    result = result.concat(undoo.decrypt(prep));
+  }
+
+  var take_f = "";
+
+  for(xx in result) {
+    if(result[xx] !== 0) {
+      take_f += String.fromCharCode(result[xx]);
+    }
+  }
+
+  document.getElementById("y-transform-take-it").style.display = "block";
+  document.getElementById("y-transform-take-it").value = take_f;
+}
+</script>
+
+<style>
+.y-nav > a { 
+  background-color: #EEDC9A;
+  color: #043927;
+}
+.y-nav > a:hover {
+  box-shadow: none;
+  background-color: #D2C38D;
+}
+.active {
+  box-shadow: none;
+  background-color: #043927 !important;
+  color: #EEDC9A !important;
+}
+</style>
+
+<div class="y-transform">
+  <ul>
+    <li>
+      <input type="text" id="one">
+    </li>
+    <li>
+      <input type="text" id="two">
+    </li>
+    <li>
+      <button id="y-transform-b1" onclick="doo()">O</button><button id="y-transform-b2" onclick="undoo()">X</button>
+    </li>
+    <li>
+      <!--button id="four" onclick="undoo()"></button-->
+    </li>
+    <li>
+      <input style="width: 100%;" onclick="this.select()" id="y-transform-take-it" readonly>
+    </li>
+  </ul>
+</div>
+
+    </div>
+  </body>
+</html>

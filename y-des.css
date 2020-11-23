@@ -328,4 +328,100 @@ p, a {
   color: #2E9797;
 }
 
+/***********************************************/
+
+.y-transform {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+.y-transform > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.y-transform > ul > li {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 14px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.y-transform > ul > li > label {
+  font-family: "Arvo";
+  font-size: 13px;
+  float: left;
+  display: block;
+  text-align: center;
+  width: 100%;
+  line-height: 23px;
+  background-color: #043927;
+  color: #FBEED1;
+}
+.y-transform > ul > li > input[type=text] {
+  float: left;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 11px;
+  padding-right: 11px;
+  text-align: center;
+  line-height: 23px;
+  background-color: #EEDC9A;
+  font-family: "Arvo";
+  font-size: 13px;
+  width: 100%;
+}
+.y-transform > ul > li > button {
+   display: inline-block;
+   border: 2px solid #2A5B84;
+   border-radius: 0;
+   -webkit-appearance: none;
+   outline: none;
+   font-family: "Arvo";
+   font-size: 13px;
+   padding: 4px 9px 4px 9px;
+   transition: 0.3s;
+   cursor: pointer;
+   margin-right: 16px;
+   margin-left: 16px;
+   color: #BBBBBB;
+   width: 70px;
+   height: 57px;
+   margin-top: 16px;
+}
+.y-transform > ul > li > button:hover {
+   box-shadow: 0px 4px 8px #333333;
+   background-color: #2A5B84;
+   color: #FBEED1;
+}
+
+#y-transform-b1 {
+  background-color: #043927;
+  border: 2px solid #EEDC9A;
+  color: #EEDC9A;
+}
+#y-transform-b2 {
+  background-color: #EEDC9A;
+  border: 2px solid #043927;
+  color: #043927;
+}
+#y-transform-take-it {
+  border: none;
+  outline: none;
+  font-family: "Arvo";
+  font-size: 13px;
+  float: left;
+  text-align: center;
+  width: 100%;
+  line-height: 23px;
+  background-color: #043927;
+  color: #FBEED1;
+  display: none;
+}
 
